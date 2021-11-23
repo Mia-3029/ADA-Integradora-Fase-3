@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Mia Murrieta">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Pedido de albúm</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<style>
+		body {
+			text-align: left;
+			background-repeat: repeat;
+			background-position: center;
+			width: 100%;
+			text-decoration-color: white;
+			color: black;
+		}
+
+    p{
+      color: black;
+      text-aling: left;
+    }
+
+		input:invalid {
+			border: 1px solid rgba(155, 2, 216, 0.898);  
+			font-family: Courier New;
+		}
+
+		input:valid {
+			border: 1px solid rgb(0, 2, 0);
+		}
+
+		form {
+			margin: 0 auto;
+			width: 700px;
+			padding: 1em;
+			border: 2px solid rgb(60, 134, 231);
+			border-radius: 1em;
+			background-color: rgb(60, 134, 231, .50);
+			font-family: Courier New;
+      text-aling: left;
+		}
+
+		form div+div {
+			margin-top: 1em;
+		}
+
+		label {
+			display: inline-block;
+			width: 150px;
+			text-align: left;
+		}
+
+		input,
+		textarea {
+			font: 1em sans-serif;
+			width: 250px;
+			box-sizing: border-box;
+			border: 1px solid rgb(2, 2, 0);
+			border-radius: 0.5em;     
+			font-family: Courier New;
+		}
+
+		input:focus,
+		textarea:focus {
+			border-color: #000;
+		}
+
+		textarea {
+			vertical-align: top;
+			height: 5em;
+		}
+
+		.button {
+			padding-left: 90px;
+			position: left;
+		}
+
+		button {
+			margin-left: .5em;
+			position: left;    
+			font-family: Courier New;
+		}
+	</style>
+</head>
+
+<body>
+	<script src="script.js">
+
+	</script>
+	<h1 id="pageHeader">DAY6</h1>
+
+	<main id="mainArticle" style="color: black;">
+	
+	 <form name="PedidodeAlbum" action="" method="post">
+    <h2>1. Álbum que desea pedir</h2>
+      <input type="checkbox" name="sunrise" id="sunrise">
+      <label for="sunrise">sunrise</label>
+      <br>
+      <br>
+      <input type="checkbox" name="moonrise" id="moonrise">
+      <label for="moonrise">moonrise</label>
+      <br>
+      <br>
+      <input type="checkbox" name="entropy" id="entropy">
+      <label for="entropy">The Book Of Us: Entropy</label>
+      <br>
+      <br>
+      <input type="checkbox" name="theday" id="theday">
+      <label for="theday">The Day</label>
+      <br>
+      <br>
+      <input type="checkbox" name="daydream" id="daydream">
+      <label for="daydream">Day Dream</label>
+      <br>
+      <br>
+      <input type="checkbox" name="shootme" id="shootme">
+      <label for="shootme">Shoot Me: Youth Part 1</label>
+      <br>
+      <br>
+      <input type="checkbox" name="Remember" id="Remember">
+      <label for="Remember">Remember Us: Youth Part 2</label>
+      <br>
+      <br>
+      <input type="checkbox" name="Gravity" id="Gravity">
+      <label for="Gravity">The Book of Us: Gravity</label>
+      <br>
+      <br>
+      <input type="checkbox" name="Demon" id="Demon">
+      <label for="Demon">The Book of Us: The Demon</label>
+      <br>
+      <br>
+      <input type="checkbox" name="Negentropy" id="Negentropy">
+      <label for="Negentropy">The Book of Us: Negentropy - Chaos Swallowed Up in Love</label>
+      <br>
+      <br>
+
+    <h2>2. Forma de pago</h2>
+       <p style="text-aling: left">Elija su forma de pago</p>
+       <br>      
+       <input type="radio" name="botón" value="Oxxo">Oxxo      
+       <input type="radio" name="botón" value="Tarjeta">Tarjeta
+
+    <h2>3. Dirección</h2>
+      <label for="semestre">País o región:</label>
+       <select name="semestre">
+        <option value="México">México </option>
+        <option value="Brasil">Brasil</option>
+        <option value="El Salvador">El Salvador</option>
+        <option value="Chile"> Chile</option>
+        <option value= "Colombia">Colombia</option>
+        <option value= "Argentina">Argentina</option>
+        <option value= "Ecuador">Ecuador</option> 
+        <option value= "Perú">Perú</option>      
+       </select>
+
+      <br>
+      <br>
+
+      <label for="nombre">Nombre completo:</label>
+      <input id="nombre" name="nombre" type="text" required value=""placeholder="Ingrese su nombre completo" maxlength="100"> 
+      <br>
+      <br>
+      <label for="Dirección">Dirección:</label>
+      <input id="Dirección" name="Dirección" type="text" required value=""placeholder="Ingrese su dirección" maxlength="100">
+      <br>
+      <br>
+      <label for="Código">Código Postal:</label>
+      <input id="Código" name="Código" type="text" required value=""placeholder="Ingrese su código postal" maxlength="100">     
+      <br>
+      <br>
+      <label for="Estado">Estado/Provincia/Región:</label>
+      <input id="Estado" name="Estado" type="text" required value=""placeholder="Ingrese su Estado/Provincia/Región" maxlength="100">  
+      <br>
+      <br>
+      <label for="Ciudad">Ciudad:</label>
+      <input id="Ciudad" name="Ciudad" type="text" required value=""placeholder="Ingrese su ciudad" maxlength="100"> 
+      <br>
+      <br> 
+      <label for="Colonia">Colonia:</label>
+      <input id="Colonia" name="Colonia" type="text" required value=""placeholder="Ingrese su colonia" maxlength="100">
+      <br>
+      <br>
+      <label for="teléfono">Número de teléfono:</label>
+      <input id="teléfono" name="teléfono" type="number" required value=""placeholder="Ingrese su número telefonico" maxlength="100">
+      <br>
+      <br>
+      <label for="instrucciones">Agregar instrucciones de entrega:</label>
+      <textarea id="instrucciones" name="instrucciones" required value="" placeholder="Agreguer instrucciones del lugar para que la entrega sea más fácil" maxlength="100"></textarea>
+    <br>
+    <br>	
+   </form>
+
+   <br>
+
+   <table>
+
+			<tr>
+				<th>
+          <h3>Lista de precios</h3>
+        </th>
+			</tr>
+
+      <tr>
+				<td>
+          <div id="vue-instance">
+           <ul>
+            <li v-for="perro in inventory">
+             {{ perro.name }}: ${{ perro.price }}
+            </li>
+           </ul>
+          </div>
+        </td>
+			</tr>      
+
+	 </table>
+
+	 <figure id="1">
+			<!-- SE EMPLEA PARA AGRUPAR CONTENIDOS COMO ILUSTRACIONES, DIAGRAMAS, FOTOS, CÓDIGO, ETC -->
+   </figure>
+      <hr>
+   <figure id="2" style="display:block;margin:auto"></figure> 
+  </main>
+  
+    <nav style="list-style:none;">
+      <ulstyle="list-style:none;">
+        <li><a href="index.html"> Introducción</a></li>
+        <br>
+				<li><a href="Historia.html"> Historia</a></li>
+        <br>
+				<li><a href="MiembrosyCuriosidades.html"> Miembros</a></li>
+        <br>
+				<li><a href="Discografia.html"> Álbumes en coreano</a></li>
+        <br>
+				<li><a href="Premios.html"> Premios</a></li>
+        <br>
+        <li><a href="Formulario.html"> Formulario</a></li>        
+      </ul>
+    </nav>
+    
+    <div id="siteAds">
+      <details>
+        <summary>También se buscó</summary>
+          <dl>
+            <dt><img src="Imagenes/otros grupos/stray kids.jpeg" alt= "stray kids" width="100"></dt>
+            <dt>Stray Kids</dt>
+            <dt><img src="Imagenes/otros grupos/red velvet.jpg" alt= "Red Velvet" width="100"></dt>
+            <dt>Red Velvet</dt>
+            <dt><img src="Imagenes/otros grupos/enhypen.jpg" alt= "ENHYPEN" width="100"></dt>
+            <dt>ENHYPEN</dt>
+            <dt><img src="Imagenes/otros grupos/TXT.jpeg" alt= "TXT" width="100"></dt>
+            <dt>TXT</dt>
+            <dt><img src="Imagenes/otros grupos/BTS.jpg" alt= "BTS" width="100"></dt>
+            <dt>BTS</dt>
+            <dt><img src="Imagenes/otros grupos/dreamcatcher.png" alt= "Dreamcatcher" width="100"></dt>
+            <dt>Dreamcatcher</dt>
+          </dl>
+      </details>
+    </div>
+
+  <footer class="footer-frase">"Tus calidas manos se están enfriando" -GoodBye Winter</footer>
+
+  <script src="script.js"></script>
+  <script>
+    var vm = new Vue({
+      el: '#vue-instance',
+      data: {
+        inventory: [
+          {name: '• Sunrise', price: 540},
+          {name: '• Moonrise', price: 580},
+          {name: '• The book of us: Entropy', price: 820},
+          {name: '• Unlock', price: 518},
+          {name: '• Shoot me: Youth Part 1', price:517},
+          {name: '• Remember Us: Youth Part',price:503.17},
+          {name: '• The book for Us: Gravity',price:562.40},
+          {name: '• The book for Us: Negentropy',price:699.00},
+          {name: '• The book of us: Demond',price:557.78},
+          {name: '• The Day',price:462},
+          {name: '• Day Dream',price:450},
+        ]
+      }
+    });
+</script>
+
+</body>
+</html>
